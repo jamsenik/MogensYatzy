@@ -214,11 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloWorld/SViewController.swift"
-            timestampString = "489246164.583218"
+            timestampString = "489250407.220156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "newGame(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -230,11 +230,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloWorld/SViewController.swift"
-            timestampString = "489246164.583218"
+            timestampString = "489250407.220156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "playChosen(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -262,11 +262,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloWorld/YatzySet.swift"
-            timestampString = "489242061.212573"
+            timestampString = "489248309.24338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "init()"
             landmarkType = "5">
          </BreakpointContent>
@@ -278,11 +278,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloWorld/SViewController.swift"
-            timestampString = "489246164.583218"
+            timestampString = "489251286.069025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "diceAdded(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -294,11 +294,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HelloWorld/SViewController.swift"
-            timestampString = "489246164.583218"
+            timestampString = "489251286.069025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "updateScore()"
             landmarkType = "5">
          </BreakpointContent>

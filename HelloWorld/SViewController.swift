@@ -24,25 +24,24 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var Bonus4: UITextField?
     @IBOutlet weak var Bonus5: UITextField?
     @IBOutlet weak var Bonus6: UITextField?
-    @IBOutlet weak var Play0: UILabel?
-    @IBOutlet weak var Play1: UILabel?
-    @IBOutlet weak var Play2: UILabel?
-    @IBOutlet weak var Play3: UILabel?
-    @IBOutlet weak var Play4: UILabel?
-    @IBOutlet weak var Play5: UILabel?
-    @IBOutlet weak var Play6: UILabel?
-    @IBOutlet weak var Play7: UILabel?
-    @IBOutlet weak var Play8: UILabel?
-    @IBOutlet weak var Play9: UILabel?
-    @IBOutlet weak var Play10: UILabel?
-    @IBOutlet weak var Play11: UILabel?
-    @IBOutlet weak var Play12: UILabel?
-    @IBOutlet weak var Play13: UILabel?
-    @IBOutlet weak var Play14: UILabel?
-    @IBOutlet weak var Play15: UIImageView?
-    @IBOutlet weak var Play16: UILabel?
-    @IBOutlet weak var Play17: UILabel?
-    @IBOutlet weak var Play18: UILabel?
+    @IBOutlet weak var Ones: UILabel?
+    @IBOutlet weak var Twos: UILabel?
+    @IBOutlet weak var Threes: UILabel?
+    @IBOutlet weak var Fours: UILabel?
+    @IBOutlet weak var Fives: UILabel?
+    @IBOutlet weak var Sixes: UILabel?
+    @IBOutlet weak var OnePair: UILabel?
+    @IBOutlet weak var TwoPairs: UILabel?
+    @IBOutlet weak var ThreePairs: UILabel?
+    @IBOutlet weak var ThreeOfAKind: UILabel?
+    @IBOutlet weak var FourOfAKind: UILabel?
+    @IBOutlet weak var Castle: UILabel?
+    @IBOutlet weak var SmallStright: UILabel?
+    @IBOutlet weak var LargeStright: UILabel?
+    @IBOutlet weak var Mogens: UIImageView?
+    @IBOutlet weak var FullHouse: UILabel?
+    @IBOutlet weak var Chance: UILabel?
+    @IBOutlet weak var Yatzy: UILabel?
     @IBOutlet var allPlayButtons: [UIButton]?
     @IBOutlet var allDiceButtons: [UIButton]?
     
@@ -54,6 +53,7 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     var selectedBonus : UITextField?
     var selectedTotal : UILabel?
     var currentPlay = YatzyRound(round: 0)
+    var plays : [UIView]?
     
     required init?(coder aDecoder: NSCoder) {
         YatzySets = Array<YatzySet>();
@@ -75,7 +75,37 @@ class SViewController: UIViewController, UIAlertViewDelegate {
             prev = current
         }
         selectedPlayer = YatzySets[0]
+        
     }
+    override func viewWillAppear(animated: Bool) {
+        for button in allPlayButtons! {
+            button.setTitle("", forState: .Normal)
+            button.layer.cornerRadius = 4
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.lightGrayColor().CGColor
+        }
+        var p : [UIView] = Array()
+        p.append(Ones!)
+        p.append(Twos!)
+        p.append(Threes!)
+        p.append(Fours!)
+        p.append(Fives!)
+        p.append(Sixes!)
+        p.append(OnePair!)
+        p.append(TwoPairs!)
+        p.append(ThreePairs!)
+        p.append(ThreeOfAKind!)
+        p.append(FourOfAKind!)
+        p.append(Castle!)
+        p.append(SmallStright!)
+        p.append(LargeStright!)
+        p.append(Mogens!)
+        p.append(FullHouse!)
+        p.append(Chance!)
+        p.append(Yatzy!)
+        plays = p
+    }
+    
     
     
     override func beginAppearanceTransition(isAppearing: Bool, animated: Bool) {
@@ -122,32 +152,19 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         currentRound?.text? = currentPlay.ToString()
         selectedBonus = GetBonus(player)
         selectedTotal = GetTotal(player)
-        //selectedBonus = [Bonuses objectAtIndex:player];
-        //selectedTotal = [Totals objectAtIndex:player];
         
         selectedPlayButton = sender;
         selectedPlayButton!.layer.borderColor = UIColor.redColor().CGColor
         selectedPlayButton!.layer.borderWidth = 3
         selectedPlayButton?.selected = true
+        DimSetPlays()
         
-        //        for (int i = 0; i < 19; i++){
-        //            UILabel *playLabel = [Plays objectAtIndex:i];
-        //            BOOL isset = [selectedPlayer isSet:i];
-        //            BOOL toHighlight = !isset;
-        //            [playLabel setHighlighted:toHighlight];
-        //
-        //        }
-        //
-        //        if ([selectedPlayer isSet:15]){
-        //            Play15.alpha = 0;
-        //        } else{
-        //            Play15.alpha = 1;
-        //        }
-        //        [DicePicker reloadAllComponents];
-        //        for (int i = 0; i < DicePicker.numberOfComponents; i++) {
-        //            [DicePicker selectRow:0 inComponent:i animated:true];
-        //        }
-        
+    }
+    
+    func DimSetPlays() {
+        for i in 0..<18 {
+            plays![i].alpha = selectedPlayer.Rounds[i].Blank() ? 1 : 0
+        }
     }
     
     @IBAction func diceAdded(diceButton: UIButton) {

@@ -1439,30 +1439,30 @@
                         <outlet property="Bonus4" destination="Bx4-pL-fHk" id="dz3-lk-uDL"/>
                         <outlet property="Bonus5" destination="Uma-VS-dQk" id="Gi6-kn-FHy"/>
                         <outlet property="Bonus6" destination="RlF-Cy-I6g" id="T8D-Be-vUQ"/>
-                        <outlet property="Play0" destination="piZ-Pu-G51" id="Blq-Ic-rzd"/>
-                        <outlet property="Play1" destination="QaB-GK-O8A" id="0SM-Mz-Hk3"/>
-                        <outlet property="Play10" destination="SaN-ui-dPk" id="4Zh-56-JKu"/>
-                        <outlet property="Play11" destination="uUb-Y8-SeB" id="hhK-Cq-mfD"/>
-                        <outlet property="Play12" destination="tnG-CI-pC5" id="ms9-eq-xWb"/>
-                        <outlet property="Play13" destination="9Ka-Yu-cXh" id="NRg-Xw-gR4"/>
-                        <outlet property="Play14" destination="MBp-dX-3OH" id="kln-b3-ooh"/>
-                        <outlet property="Play15" destination="rhf-yP-sab" id="pI5-c5-IaR"/>
-                        <outlet property="Play16" destination="eqS-BO-hMJ" id="Kyb-j1-hw9"/>
-                        <outlet property="Play17" destination="Kby-eI-kiI" id="szu-qI-v3U"/>
-                        <outlet property="Play18" destination="IH2-L6-Zqm" id="5g1-yZ-box"/>
-                        <outlet property="Play2" destination="kb0-hr-fF5" id="uAY-e9-E5I"/>
-                        <outlet property="Play3" destination="H3O-Td-qzr" id="gbg-Z8-LLn"/>
-                        <outlet property="Play4" destination="gqw-bQ-jtg" id="Kxx-HO-UB0"/>
-                        <outlet property="Play5" destination="Zdg-Ba-VWw" id="0ca-X1-9gc"/>
-                        <outlet property="Play7" destination="7g7-FM-puN" id="U10-76-bfO"/>
-                        <outlet property="Play8" destination="d5T-50-UHb" id="Ux2-TD-OKz"/>
-                        <outlet property="Play9" destination="Gvi-Gg-nhG" id="K45-CB-ms7"/>
+                        <outlet property="Castle" destination="tnG-CI-pC5" id="DTV-kt-Piz"/>
+                        <outlet property="Chance" destination="Kby-eI-kiI" id="3Lc-Lw-TYa"/>
+                        <outlet property="Fives" destination="gqw-bQ-jtg" id="gYG-WS-d9p"/>
+                        <outlet property="FourOfAKind" destination="uUb-Y8-SeB" id="jAi-fs-hLL"/>
+                        <outlet property="Fours" destination="H3O-Td-qzr" id="73V-Op-Yq3"/>
+                        <outlet property="FullHouse" destination="eqS-BO-hMJ" id="NfE-8L-E4G"/>
+                        <outlet property="LargeStright" destination="MBp-dX-3OH" id="Inp-rP-nCO"/>
+                        <outlet property="Mogens" destination="rhf-yP-sab" id="LJk-G1-mRo"/>
+                        <outlet property="OnePair" destination="7g7-FM-puN" id="5mF-4j-BC7"/>
+                        <outlet property="Ones" destination="piZ-Pu-G51" id="7li-kQ-Iru"/>
+                        <outlet property="Sixes" destination="Zdg-Ba-VWw" id="ttK-YX-qzw"/>
+                        <outlet property="SmallStright" destination="9Ka-Yu-cXh" id="PDN-N6-hvn"/>
+                        <outlet property="ThreeOfAKind" destination="SaN-ui-dPk" id="Ni6-vj-VuM"/>
+                        <outlet property="ThreePairs" destination="Gvi-Gg-nhG" id="Ida-63-Kzu"/>
+                        <outlet property="Threes" destination="kb0-hr-fF5" id="Qxx-J9-Yxg"/>
                         <outlet property="Total1" destination="kJB-v3-JYV" id="aF8-Ky-kTC"/>
                         <outlet property="Total2" destination="Vwq-DY-vod" id="Tob-Fb-ScS"/>
                         <outlet property="Total3" destination="HSD-xR-5Vq" id="bw6-4w-Ebo"/>
                         <outlet property="Total4" destination="xeN-tk-lBw" id="SA1-Nz-85r"/>
                         <outlet property="Total5" destination="Uzr-56-zGS" id="clR-Wu-DrM"/>
                         <outlet property="Total6" destination="lne-4U-JWt" id="RsD-I4-Hj1"/>
+                        <outlet property="TwoPairs" destination="d5T-50-UHb" id="JWu-ba-jj0"/>
+                        <outlet property="Twos" destination="QaB-GK-O8A" id="32i-HU-PWD"/>
+                        <outlet property="Yatzy" destination="IH2-L6-Zqm" id="qFi-i2-zWA"/>
                         <outlet property="currentRound" destination="Q42-9T-RXU" id="Dmm-KN-Ow8"/>
                         <outletCollection property="allPlayButtons" destination="Rfj-4y-Cp9" collectionClass="NSMutableArray" id="aEG-hC-Hy9"/>
                         <outletCollection property="allPlayButtons" destination="7yf-fY-IWK" collectionClass="NSMutableArray" id="bT8-8u-LLj"/>
