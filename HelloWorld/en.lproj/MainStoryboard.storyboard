@@ -1,27 +1,1586 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1906" systemVersion="11A511" targetRuntime="iOS.CocoaTouch.iPad" nextObjectID="6" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="902"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="dice.ttf">
+            <string>Dice</string>
+            <string>Dice</string>
+            <string>Dice</string>
+            <string>Dice</string>
+            <string>Dice</string>
+            <string>Dice</string>
+            <string>Dice</string>
+            <string>Dice</string>
+            <string>Dice</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
+        <!--View Controller-->
         <scene sceneID="4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                <viewController id="2" customClass="SViewController" customModule="MogensYatzy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spiller 1" minimumFontSize="17" id="eM4-3x-Jd0">
+                                <rect key="frame" x="108" y="20" width="97" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spiller 2" minimumFontSize="17" id="81y-9v-tRm">
+                                <rect key="frame" x="213" y="20" width="97" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spiller 3" minimumFontSize="17" id="hB4-LL-ROs">
+                                <rect key="frame" x="318" y="20" width="97" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spiller 4" minimumFontSize="17" id="mdG-m6-tK7">
+                                <rect key="frame" x="423" y="20" width="97" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="500" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spiller 5" minimumFontSize="17" id="Hf7-gu-6E4">
+                                <rect key="frame" x="528" y="20" width="97" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="600" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spiller 6" minimumFontSize="17" id="GuT-mt-OhA">
+                                <rect key="frame" x="633" y="20" width="97" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="piZ-Pu-G51">
+                                <rect key="frame" x="21" y="62" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="QaB-GK-O8A">
+                                <rect key="frame" x="21" y="91" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="kb0-hr-fF5">
+                                <rect key="frame" x="21" y="120" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="H3O-Td-qzr">
+                                <rect key="frame" x="21" y="149" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="gqw-bQ-jtg">
+                                <rect key="frame" x="20" y="178" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="Zdg-Ba-VWw">
+                                <rect key="frame" x="21" y="207" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bonus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="ADv-0B-Bmb">
+                                <rect key="frame" x="20" y="247" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kJB-v3-JYV">
+                                <rect key="frame" x="108" y="646" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Vwq-DY-vod">
+                                <rect key="frame" x="213" y="646" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="HSD-xR-5Vq">
+                                <rect key="frame" x="318" y="646" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xeN-tk-lBw">
+                                <rect key="frame" x="423" y="646" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Uzr-56-zGS">
+                                <rect key="frame" x="528" y="646" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="106" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" id="yV9-1c-YeR">
+                                <rect key="frame" x="108" y="244" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="206" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" id="jak-o9-gss">
+                                <rect key="frame" x="213" y="244" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="306" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" id="nKg-oJ-2P0">
+                                <rect key="frame" x="318" y="244" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="406" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" id="Bx4-pL-fHk">
+                                <rect key="frame" x="423" y="243" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1 par" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="7g7-FM-puN">
+                                <rect key="frame" x="20" y="288" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2 par" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="d5T-50-UHb">
+                                <rect key="frame" x="20" y="317" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3 par" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="Gvi-Gg-nhG">
+                                <rect key="frame" x="20" y="346" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4 ens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="uUb-Y8-SeB">
+                                <rect key="frame" x="20" y="404" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lav" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="9Ka-Yu-cXh">
+                                <rect key="frame" x="20" y="462" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2 x 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="tnG-CI-pC5">
+                                <rect key="frame" x="21" y="433" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3 ens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="SaN-ui-dPk">
+                                <rect key="frame" x="20" y="375" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Høj" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="MBp-dX-3OH">
+                                <rect key="frame" x="20" y="491" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="eqS-BO-hMJ">
+                                <rect key="frame" x="21" y="549" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Chance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="Kby-eI-kiI">
+                                <rect key="frame" x="21" y="578" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yatzy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="IH2-L6-Zqm">
+                                <rect key="frame" x="20" y="607" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.90877632472826086" green="0.90877632472826086" blue="0.90877632472826086" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="LKd-E8-bVJ">
+                                <rect key="frame" x="21" y="646" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="506" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" id="Uma-VS-dQk">
+                                <rect key="frame" x="528" y="244" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="606" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" id="RlF-Cy-I6g">
+                                <rect key="frame" x="633" y="244" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="lne-4U-JWt">
+                                <rect key="frame" x="633" y="646" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Camre-small.png" id="rhf-yP-sab">
+                                <rect key="frame" x="21" y="524" width="50" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FjJ-sn-Osy">
+                                <rect key="frame" x="658" y="675" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Nyt spil">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGame:" destination="2" eventType="touchUpInside" id="fBa-Kw-9JL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fcQ-XY-nfs">
+                                <rect key="frame" x="108" y="62" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="O0k-3c-8K6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="JOY-1c-kx5">
+                                <rect key="frame" x="108" y="91" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="WYt-VO-L7F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R5V-nL-rZj">
+                                <rect key="frame" x="108" y="120" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="6ES-wd-Pg3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gx5-ft-DqE">
+                                <rect key="frame" x="108" y="148" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="gL4-Uo-2x9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nGL-ny-rgQ">
+                                <rect key="frame" x="108" y="177" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Vmk-In-z28"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="caK-3L-3vM">
+                                <rect key="frame" x="108" y="207" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Olc-Ln-YiQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jwq-2f-6yd">
+                                <rect key="frame" x="108" y="317" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="gdO-z1-BIU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lHj-MX-0lo">
+                                <rect key="frame" x="108" y="462" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="EuZ-X5-UHZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IwI-7p-s06">
+                                <rect key="frame" x="108" y="491" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Ny7-OY-BSx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="114" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U0J-EH-t5D">
+                                <rect key="frame" x="108" y="520" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="UMk-hT-1tq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0GU-3w-x5V">
+                                <rect key="frame" x="108" y="549" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="vc4-8u-0IR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="17F-pR-FXA">
+                                <rect key="frame" x="108" y="433" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="VUS-81-BrO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7vK-ad-hWa">
+                                <rect key="frame" x="108" y="404" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="MQR-ZE-c1f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dfv-J8-Vmk">
+                                <rect key="frame" x="108" y="375" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="iA7-vj-iSg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XFE-FA-e5C">
+                                <rect key="frame" x="108" y="346" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="ktW-u3-PxZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gol-bN-VKc">
+                                <rect key="frame" x="108" y="578" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="ghw-SX-EiZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Ud-xE-3yo">
+                                <rect key="frame" x="108" y="607" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="LRb-VB-fTU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BN4-Xj-5v3">
+                                <rect key="frame" x="108" y="288" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="BQY-LK-LUi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KYw-yB-mTK">
+                                <rect key="frame" x="213" y="62" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="g3L-BZ-Xoo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e0g-pg-PmV">
+                                <rect key="frame" x="213" y="91" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="4UW-ne-hiz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2dP-4Z-ziV">
+                                <rect key="frame" x="213" y="120" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="riR-GO-gYD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rcU-Xx-Pkq">
+                                <rect key="frame" x="213" y="148" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="cig-UG-TX1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8yS-PS-OHj">
+                                <rect key="frame" x="213" y="177" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="KWk-jb-ODC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jsf-Uu-fOW">
+                                <rect key="frame" x="213" y="207" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Xn6-GT-kGk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="207" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oJg-k1-n0d">
+                                <rect key="frame" x="213" y="317" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="0WB-Vp-tio"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="212" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kfj-TL-x9L">
+                                <rect key="frame" x="213" y="462" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="ZQc-wG-HbW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="213" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MD1-yT-VaS">
+                                <rect key="frame" x="213" y="491" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="uhq-Jx-1Fg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="214" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z9J-XI-YoW">
+                                <rect key="frame" x="213" y="520" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="uwZ-1z-0tY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="215" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BoX-G1-NI6">
+                                <rect key="frame" x="213" y="549" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="sMt-lY-rmh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="211" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="340-Hs-3fK">
+                                <rect key="frame" x="213" y="433" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="GRC-Wm-EUg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="210" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V8x-Jm-r7W">
+                                <rect key="frame" x="213" y="404" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="9F6-yw-mmi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="leZ-Gb-mGq">
+                                <rect key="frame" x="213" y="375" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="i6N-SL-pOf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="208" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NPg-Vr-wad">
+                                <rect key="frame" x="213" y="346" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="NHU-Ye-PJY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="216" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ahs-Y9-Xoq">
+                                <rect key="frame" x="213" y="578" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="ejp-Yk-ykB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="217" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1fR-UO-ViP">
+                                <rect key="frame" x="213" y="607" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="irr-gO-j30"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="206" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OBL-hL-DBz">
+                                <rect key="frame" x="213" y="288" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="ncw-gZ-tX2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QNn-RX-f5t">
+                                <rect key="frame" x="318" y="62" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="P1o-k3-a4T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zhp-Zi-Ij8">
+                                <rect key="frame" x="318" y="91" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="CDp-aW-V3d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="302" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EQa-FG-pQS">
+                                <rect key="frame" x="318" y="120" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="oik-ZV-Luh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="303" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dsc-yz-lQ5">
+                                <rect key="frame" x="318" y="148" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="85D-BE-Eum"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="304" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YHc-bZ-wrf">
+                                <rect key="frame" x="318" y="177" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="OsG-W8-Qta"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="305" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="04P-SF-Vga">
+                                <rect key="frame" x="318" y="207" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="4eO-LT-ymu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="307" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wtu-92-y5E">
+                                <rect key="frame" x="318" y="317" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="tDY-us-aGG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="312" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tf1-PD-mog">
+                                <rect key="frame" x="318" y="462" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="3R3-lE-PJv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="313" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Q4n-9e-Gkp">
+                                <rect key="frame" x="318" y="491" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="z9i-ql-LHz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="314" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fem-Gn-I3x">
+                                <rect key="frame" x="318" y="520" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="yzh-zD-FRG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="315" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AWJ-Tv-hOc">
+                                <rect key="frame" x="318" y="549" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="iLg-Ds-0UO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="311" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T5j-MA-4Xm">
+                                <rect key="frame" x="318" y="433" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="4o3-94-eJc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="310" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ynp-rt-nGT">
+                                <rect key="frame" x="318" y="404" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="2fr-py-5tm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="309" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EG5-LB-80s">
+                                <rect key="frame" x="318" y="375" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="r0v-yG-mlL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="308" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ye1-xR-qxB">
+                                <rect key="frame" x="318" y="346" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="pMx-yT-iQR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="316" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gOa-Cy-KDE">
+                                <rect key="frame" x="318" y="578" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="wx0-Of-X8m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="317" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aCJ-oQ-KMh">
+                                <rect key="frame" x="318" y="607" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="fQ0-zC-snC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="306" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xrB-xs-y3x">
+                                <rect key="frame" x="318" y="288" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="rrr-as-lKA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6BH-y3-BOd">
+                                <rect key="frame" x="423" y="62" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Xga-fc-1xk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="401" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MVb-I1-91B">
+                                <rect key="frame" x="423" y="91" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="a8g-Nl-RJ0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="402" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rg0-XJ-i1A">
+                                <rect key="frame" x="423" y="120" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="F8K-BD-JNb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="403" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XCq-dB-wcC">
+                                <rect key="frame" x="423" y="148" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="vrZ-7V-sZb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="404" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aWD-pb-iXC">
+                                <rect key="frame" x="423" y="177" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="eVH-rU-Fpk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="405" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v1U-L8-qRg">
+                                <rect key="frame" x="423" y="207" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="5AG-VY-ifG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="407" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hag-f7-JfM">
+                                <rect key="frame" x="423" y="317" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="C0q-p9-xhE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="412" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lBa-sf-3dw">
+                                <rect key="frame" x="423" y="462" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="0GT-W1-OEU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="413" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7sQ-Ca-mmH">
+                                <rect key="frame" x="423" y="491" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="lDf-Dx-a5T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="414" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2i9-8J-HBy">
+                                <rect key="frame" x="423" y="520" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="hVE-sh-F27"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="415" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bPx-8c-P5K">
+                                <rect key="frame" x="423" y="549" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="fMB-Bb-BFW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="411" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pvo-GP-P5D">
+                                <rect key="frame" x="423" y="433" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="vqz-Iu-nOu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="410" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NYP-qr-5yv">
+                                <rect key="frame" x="423" y="404" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="2fT-aC-GSQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="409" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gOv-o7-aTo">
+                                <rect key="frame" x="423" y="375" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="xHN-Op-Prw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="408" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UKI-Pf-qrZ">
+                                <rect key="frame" x="423" y="346" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="LbV-QB-1am"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="416" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SVB-dE-APQ">
+                                <rect key="frame" x="423" y="578" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="KbF-hP-b4l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="417" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vBv-mS-wSd">
+                                <rect key="frame" x="423" y="607" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="I8Y-A9-ZIO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="406" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ycu-X0-bBo">
+                                <rect key="frame" x="423" y="288" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="hO4-ZP-K3k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YiL-Qw-flg">
+                                <rect key="frame" x="528" y="62" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="tai-hz-Jjt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="501" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ySY-li-IRp">
+                                <rect key="frame" x="528" y="91" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="bM9-MM-NyN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="502" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E5N-f9-Nn0">
+                                <rect key="frame" x="528" y="120" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="71P-m7-b35"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="503" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1o6-Ju-4Cg">
+                                <rect key="frame" x="528" y="148" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="3k3-X5-jl8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="504" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PhR-MN-Ppc">
+                                <rect key="frame" x="528" y="177" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="jiq-TQ-QSD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="505" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qig-S1-mTu">
+                                <rect key="frame" x="528" y="207" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="yuW-Dv-7F6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="507" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YIa-gE-Pci">
+                                <rect key="frame" x="528" y="317" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="HNn-Yy-lQY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="512" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SyV-jx-SdX">
+                                <rect key="frame" x="528" y="462" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Yhg-4p-En1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="513" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UVl-kv-I53">
+                                <rect key="frame" x="528" y="491" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="M3O-b2-g4Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="514" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AN1-nb-nKh">
+                                <rect key="frame" x="528" y="520" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="fEW-hf-a2b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="515" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XU4-X2-8vU">
+                                <rect key="frame" x="528" y="549" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="cSv-RL-kuv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="511" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HPV-C1-iDq">
+                                <rect key="frame" x="528" y="433" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="8sn-ZP-M7Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="510" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xLA-v9-liK">
+                                <rect key="frame" x="528" y="404" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="b9J-Rt-4gH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="509" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6T9-lk-6dQ">
+                                <rect key="frame" x="528" y="375" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="kOw-wq-SeW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="508" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eun-2z-2ps">
+                                <rect key="frame" x="528" y="346" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="hBc-54-aaf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="516" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mLw-hE-Ezp">
+                                <rect key="frame" x="528" y="578" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="luZ-Wd-AMO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="517" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7yf-fY-IWK">
+                                <rect key="frame" x="528" y="607" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="dSb-pP-Hwj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="506" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jxc-uY-sDf">
+                                <rect key="frame" x="528" y="288" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="pnv-at-jki"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="600" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K0O-jp-EHh">
+                                <rect key="frame" x="633" y="62" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="gPM-iU-uTX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="601" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yUN-NJ-BbK">
+                                <rect key="frame" x="633" y="91" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="0Wj-M1-XZM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="602" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bl9-gY-dkj">
+                                <rect key="frame" x="633" y="120" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="ZBi-aj-4HJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="603" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tYG-SA-HDy">
+                                <rect key="frame" x="633" y="148" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Si9-UO-osm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="604" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cfj-XF-6dE">
+                                <rect key="frame" x="633" y="177" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="5Lc-1t-tqD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="605" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dVC-NW-wSQ">
+                                <rect key="frame" x="633" y="207" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="clc-bl-I2Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="607" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sDk-Ud-s0J">
+                                <rect key="frame" x="633" y="317" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="Vc0-50-PqS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="612" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J4C-J0-Mav">
+                                <rect key="frame" x="633" y="462" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="3al-kF-RO9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="613" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mi3-bW-2b4">
+                                <rect key="frame" x="633" y="491" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="AFq-rr-9Mg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="614" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fQs-ng-QQF">
+                                <rect key="frame" x="633" y="520" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="iOh-0g-hEZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="615" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UBa-xC-ach">
+                                <rect key="frame" x="633" y="549" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="0JZ-j9-Nfh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="611" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Svi-FC-CDx">
+                                <rect key="frame" x="633" y="433" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="phY-oV-CLd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="610" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YWd-qg-T1y">
+                                <rect key="frame" x="633" y="404" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="tcg-nr-hQU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="609" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fzX-W4-V0i">
+                                <rect key="frame" x="633" y="375" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="b5U-t5-YDA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="608" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HGD-YN-sWx">
+                                <rect key="frame" x="633" y="346" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="oDD-c8-LJJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="616" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mos-gm-FSE">
+                                <rect key="frame" x="633" y="578" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="WsR-gB-819"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="617" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rfj-4y-Cp9">
+                                <rect key="frame" x="633" y="607" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="dBU-al-DeC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="606" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qdU-Wu-rjv">
+                                <rect key="frame" x="633" y="288" width="97" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChosen:" destination="2" eventType="touchUpInside" id="ueY-5W-yjK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cYU-fh-sbV">
+                                <rect key="frame" x="14" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="diceAdded:" destination="2" eventType="touchUpInside" id="Czq-vB-gMG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S1t-xt-ZSA">
+                                <rect key="frame" x="84" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="diceAdded:" destination="2" eventType="touchUpInside" id="Yxq-4i-jWO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iEf-Qg-gzc">
+                                <rect key="frame" x="173" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="diceAdded:" destination="2" eventType="touchUpInside" id="6Im-O0-gYG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="whQ-yV-XG8">
+                                <rect key="frame" x="262" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="diceAdded:" destination="2" eventType="touchUpInside" id="yH2-Wx-3hO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fG7-6z-h1h">
+                                <rect key="frame" x="351" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="diceAdded:" destination="2" eventType="touchUpInside" id="Vp0-z6-tPF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5dq-Qf-XGM">
+                                <rect key="frame" x="440" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="diceAdded:" destination="2" eventType="touchUpInside" id="1sE-gI-BcB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H2W-3g-65i">
+                                <rect key="frame" x="612" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="scratch:" destination="2" eventType="touchUpInside" id="u1O-0O-ZUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FRC-5U-QGQ">
+                                <rect key="frame" x="528" y="859" width="81" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="48"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="backdice:" destination="2" eventType="touchUpInside" id="AZX-hc-Czt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q42-9T-RXU">
+                                <rect key="frame" x="21" y="764" width="375" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Dice" family="Dice" pointSize="36"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="obr-Tx-Bcj"/>
+                    <connections>
+                        <outlet property="Bonus1" destination="yV9-1c-YeR" id="cnp-ca-csL"/>
+                        <outlet property="Bonus2" destination="jak-o9-gss" id="s2T-RP-ULC"/>
+                        <outlet property="Bonus3" destination="nKg-oJ-2P0" id="Ll2-G2-s3J"/>
+                        <outlet property="Bonus4" destination="Bx4-pL-fHk" id="dz3-lk-uDL"/>
+                        <outlet property="Bonus5" destination="Uma-VS-dQk" id="Gi6-kn-FHy"/>
+                        <outlet property="Bonus6" destination="RlF-Cy-I6g" id="T8D-Be-vUQ"/>
+                        <outlet property="Play0" destination="piZ-Pu-G51" id="Blq-Ic-rzd"/>
+                        <outlet property="Play1" destination="QaB-GK-O8A" id="0SM-Mz-Hk3"/>
+                        <outlet property="Play10" destination="SaN-ui-dPk" id="4Zh-56-JKu"/>
+                        <outlet property="Play11" destination="uUb-Y8-SeB" id="hhK-Cq-mfD"/>
+                        <outlet property="Play12" destination="tnG-CI-pC5" id="ms9-eq-xWb"/>
+                        <outlet property="Play13" destination="9Ka-Yu-cXh" id="NRg-Xw-gR4"/>
+                        <outlet property="Play14" destination="MBp-dX-3OH" id="kln-b3-ooh"/>
+                        <outlet property="Play15" destination="rhf-yP-sab" id="pI5-c5-IaR"/>
+                        <outlet property="Play16" destination="eqS-BO-hMJ" id="Kyb-j1-hw9"/>
+                        <outlet property="Play17" destination="Kby-eI-kiI" id="szu-qI-v3U"/>
+                        <outlet property="Play18" destination="IH2-L6-Zqm" id="5g1-yZ-box"/>
+                        <outlet property="Play2" destination="kb0-hr-fF5" id="uAY-e9-E5I"/>
+                        <outlet property="Play3" destination="H3O-Td-qzr" id="gbg-Z8-LLn"/>
+                        <outlet property="Play4" destination="gqw-bQ-jtg" id="Kxx-HO-UB0"/>
+                        <outlet property="Play5" destination="Zdg-Ba-VWw" id="0ca-X1-9gc"/>
+                        <outlet property="Play7" destination="7g7-FM-puN" id="U10-76-bfO"/>
+                        <outlet property="Play8" destination="d5T-50-UHb" id="Ux2-TD-OKz"/>
+                        <outlet property="Play9" destination="Gvi-Gg-nhG" id="K45-CB-ms7"/>
+                        <outlet property="Total1" destination="kJB-v3-JYV" id="aF8-Ky-kTC"/>
+                        <outlet property="Total2" destination="Vwq-DY-vod" id="Tob-Fb-ScS"/>
+                        <outlet property="Total3" destination="HSD-xR-5Vq" id="bw6-4w-Ebo"/>
+                        <outlet property="Total4" destination="xeN-tk-lBw" id="SA1-Nz-85r"/>
+                        <outlet property="Total5" destination="Uzr-56-zGS" id="clR-Wu-DrM"/>
+                        <outlet property="Total6" destination="lne-4U-JWt" id="RsD-I4-Hj1"/>
+                        <outlet property="currentRound" destination="Q42-9T-RXU" id="Dmm-KN-Ow8"/>
+                        <outletCollection property="allPlayButtons" destination="Rfj-4y-Cp9" collectionClass="NSMutableArray" id="aEG-hC-Hy9"/>
+                        <outletCollection property="allPlayButtons" destination="7yf-fY-IWK" collectionClass="NSMutableArray" id="bT8-8u-LLj"/>
+                        <outletCollection property="allPlayButtons" destination="fcQ-XY-nfs" collectionClass="NSMutableArray" id="cly-7I-oSW"/>
+                        <outletCollection property="allPlayButtons" destination="JOY-1c-kx5" collectionClass="NSMutableArray" id="OWL-EF-mGH"/>
+                        <outletCollection property="allPlayButtons" destination="R5V-nL-rZj" collectionClass="NSMutableArray" id="bhp-sl-bcc"/>
+                        <outletCollection property="allPlayButtons" destination="Gx5-ft-DqE" collectionClass="NSMutableArray" id="exj-ov-opm"/>
+                        <outletCollection property="allPlayButtons" destination="nGL-ny-rgQ" collectionClass="NSMutableArray" id="NPp-9p-x5e"/>
+                        <outletCollection property="allPlayButtons" destination="caK-3L-3vM" collectionClass="NSMutableArray" id="sgj-TU-LyR"/>
+                        <outletCollection property="allPlayButtons" destination="BN4-Xj-5v3" collectionClass="NSMutableArray" id="uT0-kp-hnp"/>
+                        <outletCollection property="allPlayButtons" destination="jwq-2f-6yd" collectionClass="NSMutableArray" id="VqV-VN-GG6"/>
+                        <outletCollection property="allPlayButtons" destination="17F-pR-FXA" collectionClass="NSMutableArray" id="8a2-Hr-qkf"/>
+                        <outletCollection property="allPlayButtons" destination="XFE-FA-e5C" collectionClass="NSMutableArray" id="Vv0-1k-f2l"/>
+                        <outletCollection property="allPlayButtons" destination="Dfv-J8-Vmk" collectionClass="NSMutableArray" id="sav-7Q-Mi0"/>
+                        <outletCollection property="allPlayButtons" destination="7vK-ad-hWa" collectionClass="NSMutableArray" id="I69-0L-ojs"/>
+                        <outletCollection property="allPlayButtons" destination="lHj-MX-0lo" collectionClass="NSMutableArray" id="Uvz-PG-QRV"/>
+                        <outletCollection property="allPlayButtons" destination="IwI-7p-s06" collectionClass="NSMutableArray" id="osl-KQ-8b7"/>
+                        <outletCollection property="allPlayButtons" destination="U0J-EH-t5D" collectionClass="NSMutableArray" id="5tH-VG-mKZ"/>
+                        <outletCollection property="allPlayButtons" destination="0GU-3w-x5V" collectionClass="NSMutableArray" id="jZ1-IN-j0J"/>
+                        <outletCollection property="allPlayButtons" destination="Gol-bN-VKc" collectionClass="NSMutableArray" id="XLE-Zw-9RU"/>
+                        <outletCollection property="allPlayButtons" destination="6Ud-xE-3yo" collectionClass="NSMutableArray" id="exP-op-RQV"/>
+                        <outletCollection property="allPlayButtons" destination="KYw-yB-mTK" collectionClass="NSMutableArray" id="cPp-7z-iyz"/>
+                        <outletCollection property="allPlayButtons" destination="e0g-pg-PmV" collectionClass="NSMutableArray" id="BbB-wx-j8w"/>
+                        <outletCollection property="allPlayButtons" destination="2dP-4Z-ziV" collectionClass="NSMutableArray" id="cAa-En-fpG"/>
+                        <outletCollection property="allPlayButtons" destination="rcU-Xx-Pkq" collectionClass="NSMutableArray" id="aRX-ed-lNs"/>
+                        <outletCollection property="allPlayButtons" destination="8yS-PS-OHj" collectionClass="NSMutableArray" id="3XA-SY-avm"/>
+                        <outletCollection property="allPlayButtons" destination="jsf-Uu-fOW" collectionClass="NSMutableArray" id="9Hb-05-Tf5"/>
+                        <outletCollection property="allPlayButtons" destination="OBL-hL-DBz" collectionClass="NSMutableArray" id="mLL-ut-ibZ"/>
+                        <outletCollection property="allPlayButtons" destination="oJg-k1-n0d" collectionClass="NSMutableArray" id="GFN-Fn-hDL"/>
+                        <outletCollection property="allPlayButtons" destination="NPg-Vr-wad" collectionClass="NSMutableArray" id="LE5-j8-NOt"/>
+                        <outletCollection property="allPlayButtons" destination="leZ-Gb-mGq" collectionClass="NSMutableArray" id="fLn-Rb-b0o"/>
+                        <outletCollection property="allPlayButtons" destination="V8x-Jm-r7W" collectionClass="NSMutableArray" id="r4s-ub-zeq"/>
+                        <outletCollection property="allPlayButtons" destination="340-Hs-3fK" collectionClass="NSMutableArray" id="iXs-Ry-QaC"/>
+                        <outletCollection property="allPlayButtons" destination="Kfj-TL-x9L" collectionClass="NSMutableArray" id="7Mr-VW-FmQ"/>
+                        <outletCollection property="allPlayButtons" destination="MD1-yT-VaS" collectionClass="NSMutableArray" id="3vK-SM-jl9"/>
+                        <outletCollection property="allPlayButtons" destination="z9J-XI-YoW" collectionClass="NSMutableArray" id="KL3-zk-nJg"/>
+                        <outletCollection property="allPlayButtons" destination="BoX-G1-NI6" collectionClass="NSMutableArray" id="5Sa-ER-4zM"/>
+                        <outletCollection property="allPlayButtons" destination="Ahs-Y9-Xoq" collectionClass="NSMutableArray" id="sVG-0e-1RJ"/>
+                        <outletCollection property="allPlayButtons" destination="1fR-UO-ViP" collectionClass="NSMutableArray" id="Ca9-DV-MeW"/>
+                        <outletCollection property="allPlayButtons" destination="QNn-RX-f5t" collectionClass="NSMutableArray" id="FCO-ab-wKJ"/>
+                        <outletCollection property="allPlayButtons" destination="zhp-Zi-Ij8" collectionClass="NSMutableArray" id="jBs-gv-qEz"/>
+                        <outletCollection property="allPlayButtons" destination="EQa-FG-pQS" collectionClass="NSMutableArray" id="rJq-1w-2we"/>
+                        <outletCollection property="allPlayButtons" destination="Dsc-yz-lQ5" collectionClass="NSMutableArray" id="h8v-tr-3C5"/>
+                        <outletCollection property="allPlayButtons" destination="YHc-bZ-wrf" collectionClass="NSMutableArray" id="lVJ-SO-mPo"/>
+                        <outletCollection property="allPlayButtons" destination="04P-SF-Vga" collectionClass="NSMutableArray" id="weg-jN-ids"/>
+                        <outletCollection property="allPlayButtons" destination="xrB-xs-y3x" collectionClass="NSMutableArray" id="yxR-2O-mon"/>
+                        <outletCollection property="allPlayButtons" destination="wtu-92-y5E" collectionClass="NSMutableArray" id="5ZD-QB-iKO"/>
+                        <outletCollection property="allPlayButtons" destination="Ye1-xR-qxB" collectionClass="NSMutableArray" id="J85-ix-GGm"/>
+                        <outletCollection property="allPlayButtons" destination="EG5-LB-80s" collectionClass="NSMutableArray" id="8Fe-Sq-S4F"/>
+                        <outletCollection property="allPlayButtons" destination="Ynp-rt-nGT" collectionClass="NSMutableArray" id="4Qd-wf-erd"/>
+                        <outletCollection property="allPlayButtons" destination="T5j-MA-4Xm" collectionClass="NSMutableArray" id="wMy-OO-Cab"/>
+                        <outletCollection property="allPlayButtons" destination="tf1-PD-mog" collectionClass="NSMutableArray" id="FdI-Ss-zTb"/>
+                        <outletCollection property="allPlayButtons" destination="Q4n-9e-Gkp" collectionClass="NSMutableArray" id="kia-Cp-agU"/>
+                        <outletCollection property="allPlayButtons" destination="fem-Gn-I3x" collectionClass="NSMutableArray" id="grh-de-YLY"/>
+                        <outletCollection property="allPlayButtons" destination="AWJ-Tv-hOc" collectionClass="NSMutableArray" id="p27-8W-rPH"/>
+                        <outletCollection property="allPlayButtons" destination="gOa-Cy-KDE" collectionClass="NSMutableArray" id="QcR-pq-JCy"/>
+                        <outletCollection property="allPlayButtons" destination="aCJ-oQ-KMh" collectionClass="NSMutableArray" id="Rwg-Ih-uim"/>
+                        <outletCollection property="allPlayButtons" destination="6BH-y3-BOd" collectionClass="NSMutableArray" id="HCj-2i-YBa"/>
+                        <outletCollection property="allPlayButtons" destination="MVb-I1-91B" collectionClass="NSMutableArray" id="BhJ-Qh-YfR"/>
+                        <outletCollection property="allPlayButtons" destination="rg0-XJ-i1A" collectionClass="NSMutableArray" id="rNL-kr-2up"/>
+                        <outletCollection property="allPlayButtons" destination="XCq-dB-wcC" collectionClass="NSMutableArray" id="t52-99-Dta"/>
+                        <outletCollection property="allPlayButtons" destination="aWD-pb-iXC" collectionClass="NSMutableArray" id="Dfn-hE-XqD"/>
+                        <outletCollection property="allPlayButtons" destination="v1U-L8-qRg" collectionClass="NSMutableArray" id="Mt1-qM-pbd"/>
+                        <outletCollection property="allPlayButtons" destination="Ycu-X0-bBo" collectionClass="NSMutableArray" id="hsf-ZN-TgT"/>
+                        <outletCollection property="allPlayButtons" destination="Hag-f7-JfM" collectionClass="NSMutableArray" id="wnc-O8-cCc"/>
+                        <outletCollection property="allPlayButtons" destination="UKI-Pf-qrZ" collectionClass="NSMutableArray" id="UJ0-Qu-G5c"/>
+                        <outletCollection property="allPlayButtons" destination="gOv-o7-aTo" collectionClass="NSMutableArray" id="l75-2C-bFI"/>
+                        <outletCollection property="allPlayButtons" destination="NYP-qr-5yv" collectionClass="NSMutableArray" id="stR-jI-q6I"/>
+                        <outletCollection property="allPlayButtons" destination="Pvo-GP-P5D" collectionClass="NSMutableArray" id="YJf-Bf-z2C"/>
+                        <outletCollection property="allPlayButtons" destination="lBa-sf-3dw" collectionClass="NSMutableArray" id="RDj-Wc-uac"/>
+                        <outletCollection property="allPlayButtons" destination="7sQ-Ca-mmH" collectionClass="NSMutableArray" id="oVi-f9-Apt"/>
+                        <outletCollection property="allPlayButtons" destination="2i9-8J-HBy" collectionClass="NSMutableArray" id="J3S-cd-uu0"/>
+                        <outletCollection property="allPlayButtons" destination="bPx-8c-P5K" collectionClass="NSMutableArray" id="HwZ-4O-UF9"/>
+                        <outletCollection property="allPlayButtons" destination="SVB-dE-APQ" collectionClass="NSMutableArray" id="pFl-gi-4Rg"/>
+                        <outletCollection property="allPlayButtons" destination="vBv-mS-wSd" collectionClass="NSMutableArray" id="Imc-sv-mEa"/>
+                        <outletCollection property="allPlayButtons" destination="YiL-Qw-flg" collectionClass="NSMutableArray" id="cLv-p1-iJT"/>
+                        <outletCollection property="allPlayButtons" destination="ySY-li-IRp" collectionClass="NSMutableArray" id="1Bt-hm-8fq"/>
+                        <outletCollection property="allPlayButtons" destination="E5N-f9-Nn0" collectionClass="NSMutableArray" id="uOb-Qn-e4Y"/>
+                        <outletCollection property="allPlayButtons" destination="1o6-Ju-4Cg" collectionClass="NSMutableArray" id="2TH-X6-GFP"/>
+                        <outletCollection property="allPlayButtons" destination="PhR-MN-Ppc" collectionClass="NSMutableArray" id="JcF-A0-Jih"/>
+                        <outletCollection property="allPlayButtons" destination="qig-S1-mTu" collectionClass="NSMutableArray" id="9Ev-Iy-r3G"/>
+                        <outletCollection property="allPlayButtons" destination="jxc-uY-sDf" collectionClass="NSMutableArray" id="woD-n4-8pL"/>
+                        <outletCollection property="allPlayButtons" destination="YIa-gE-Pci" collectionClass="NSMutableArray" id="RY4-tl-wyZ"/>
+                        <outletCollection property="allPlayButtons" destination="eun-2z-2ps" collectionClass="NSMutableArray" id="8o5-0X-Qg1"/>
+                        <outletCollection property="allPlayButtons" destination="6T9-lk-6dQ" collectionClass="NSMutableArray" id="pmT-vM-gMj"/>
+                        <outletCollection property="allPlayButtons" destination="xLA-v9-liK" collectionClass="NSMutableArray" id="0r9-8F-STX"/>
+                        <outletCollection property="allPlayButtons" destination="HPV-C1-iDq" collectionClass="NSMutableArray" id="MyV-3a-Jsk"/>
+                        <outletCollection property="allPlayButtons" destination="SyV-jx-SdX" collectionClass="NSMutableArray" id="Dav-QE-bzb"/>
+                        <outletCollection property="allPlayButtons" destination="UVl-kv-I53" collectionClass="NSMutableArray" id="71s-dz-7Dg"/>
+                        <outletCollection property="allPlayButtons" destination="AN1-nb-nKh" collectionClass="NSMutableArray" id="QPj-lf-tZH"/>
+                        <outletCollection property="allPlayButtons" destination="XU4-X2-8vU" collectionClass="NSMutableArray" id="hQ8-zj-f5n"/>
+                        <outletCollection property="allPlayButtons" destination="mLw-hE-Ezp" collectionClass="NSMutableArray" id="LOR-nw-gmK"/>
+                        <outletCollection property="allPlayButtons" destination="K0O-jp-EHh" collectionClass="NSMutableArray" id="RCD-II-hmJ"/>
+                        <outletCollection property="allPlayButtons" destination="yUN-NJ-BbK" collectionClass="NSMutableArray" id="bu4-aW-J6w"/>
+                        <outletCollection property="allPlayButtons" destination="Bl9-gY-dkj" collectionClass="NSMutableArray" id="AZ8-53-GsU"/>
+                        <outletCollection property="allPlayButtons" destination="tYG-SA-HDy" collectionClass="NSMutableArray" id="fVr-pA-9DM"/>
+                        <outletCollection property="allPlayButtons" destination="cfj-XF-6dE" collectionClass="NSMutableArray" id="VjT-gj-luH"/>
+                        <outletCollection property="allPlayButtons" destination="dVC-NW-wSQ" collectionClass="NSMutableArray" id="RFL-Zw-02D"/>
+                        <outletCollection property="allPlayButtons" destination="qdU-Wu-rjv" collectionClass="NSMutableArray" id="KOe-qe-6LO"/>
+                        <outletCollection property="allPlayButtons" destination="sDk-Ud-s0J" collectionClass="NSMutableArray" id="bmx-CN-af8"/>
+                        <outletCollection property="allPlayButtons" destination="HGD-YN-sWx" collectionClass="NSMutableArray" id="h5Q-xJ-N9j"/>
+                        <outletCollection property="allPlayButtons" destination="fzX-W4-V0i" collectionClass="NSMutableArray" id="dTe-jI-q8X"/>
+                        <outletCollection property="allPlayButtons" destination="YWd-qg-T1y" collectionClass="NSMutableArray" id="oX7-1z-rw0"/>
+                        <outletCollection property="allPlayButtons" destination="Svi-FC-CDx" collectionClass="NSMutableArray" id="BjF-zS-NqW"/>
+                        <outletCollection property="allPlayButtons" destination="J4C-J0-Mav" collectionClass="NSMutableArray" id="fLq-AH-kYb"/>
+                        <outletCollection property="allPlayButtons" destination="mi3-bW-2b4" collectionClass="NSMutableArray" id="kIf-0f-6s4"/>
+                        <outletCollection property="allPlayButtons" destination="fQs-ng-QQF" collectionClass="NSMutableArray" id="KVb-FQ-jmf"/>
+                        <outletCollection property="allPlayButtons" destination="UBa-xC-ach" collectionClass="NSMutableArray" id="la9-Wz-iYP"/>
+                        <outletCollection property="allPlayButtons" destination="Mos-gm-FSE" collectionClass="NSMutableArray" id="0kh-Ds-TgT"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Quh-0u-hBx"/>
             </objects>
+            <point key="canvasLocation" x="-223" y="-587"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
+    <resources>
+        <image name="Camre-small.png" width="50" height="15"/>
+    </resources>
 </document>
