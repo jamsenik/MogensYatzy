@@ -48,7 +48,9 @@ class YatzyRound{
     }
     
     func Back(){
-        Cubes.removeLast()
+        if (Cubes.count > 0){
+            Cubes.removeLast()            
+        }
     }
     
     func ToString() -> String {

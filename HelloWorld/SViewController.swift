@@ -18,6 +18,12 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var Total4: UILabel?
     @IBOutlet weak var Total5: UILabel?
     @IBOutlet weak var Total6: UILabel?
+    @IBOutlet weak var Player1: UITextField?
+    @IBOutlet weak var Player2: UITextField?
+    @IBOutlet weak var Player3: UITextField?
+    @IBOutlet weak var Player4: UITextField?
+    @IBOutlet weak var Player5: UITextField?
+    @IBOutlet weak var Player6: UITextField?
     @IBOutlet weak var Bonus1: UITextField?
     @IBOutlet weak var Bonus2: UITextField?
     @IBOutlet weak var Bonus3: UITextField?
@@ -52,6 +58,7 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     var selectedPlayButton : UIButton?
     var selectedBonus : UITextField?
     var selectedTotal : UILabel?
+    var selectedNameLabel : UITextField?
     var currentPlay = YatzyRound(round: 0)
     var plays : [UIView]?
     
@@ -141,10 +148,8 @@ class SViewController: UIViewController, UIAlertViewDelegate {
             selectedPlayButton?.selected = false
         }
         
-        //DicePicker.hidden = NO;
-        
-        let player = (sender.tag / 100) - 1 ;
-        let play = sender.tag % 100;
+        let player = (sender.tag / 100) - 1
+        let play = sender.tag % 100
         
         selectedPlayer = YatzySets[player]
         selectedPlay = play
@@ -152,6 +157,7 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         currentRound?.text? = currentPlay.ToString()
         selectedBonus = GetBonus(player)
         selectedTotal = GetTotal(player)
+        selectedNameLabel = GetNameLabel(player)
         
         selectedPlayButton = sender;
         selectedPlayButton!.layer.borderColor = UIColor.redColor().CGColor
@@ -170,17 +176,12 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     @IBAction func diceAdded(diceButton: UIButton) {
         let dice = Int(diceButton.currentTitle!)!
         currentPlay.Add(dice)
-        if (!selectedPlayer.Verify()){
-            currentPlay.Clear()
-        }
+        
         updateScore()
     }
     
     @IBAction func scratch(dice: UIButton) {
         currentPlay.Scratch()
-        if (!selectedPlayer.Verify()){
-            currentPlay.Clear()
-        }
         updateScore()
     }
     
@@ -195,6 +196,11 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         selectedPlayButton?.setTitle(score, forState: .Normal)
         selectedBonus?.text = String(selectedPlayer.GetBonus())
         selectedTotal?.text = String(selectedPlayer.GetScore())
+        if (!selectedPlayer.Verify()){
+            selectedNameLabel?.backgroundColor = UIColor.redColor()
+        } else {
+            selectedNameLabel?.backgroundColor = UIColor.whiteColor()
+        }
         
     }
     
@@ -233,6 +239,25 @@ class SViewController: UIViewController, UIAlertViewDelegate {
             return Total6!
         default:
             return Total1!
+        }
+    }
+    
+    func GetNameLabel(player : Int) -> UITextField {
+        switch player {
+        case 1:
+            return Player1!
+        case 2:
+            return Player2!
+        case 3:
+            return Player3!
+        case 4:
+            return Player4!
+        case 5:
+            return Player5!
+        case 6:
+            return Player6!
+        default:
+            return Player1!
         }
     }
 

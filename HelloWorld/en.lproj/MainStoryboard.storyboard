@@ -1449,6 +1449,12 @@
                         <outlet property="Mogens" destination="rhf-yP-sab" id="LJk-G1-mRo"/>
                         <outlet property="OnePair" destination="7g7-FM-puN" id="5mF-4j-BC7"/>
                         <outlet property="Ones" destination="piZ-Pu-G51" id="7li-kQ-Iru"/>
+                        <outlet property="Player1" destination="eM4-3x-Jd0" id="hFn-QE-rqg"/>
+                        <outlet property="Player2" destination="81y-9v-tRm" id="v4d-4j-8Su"/>
+                        <outlet property="Player3" destination="hB4-LL-ROs" id="eZE-RK-Ein"/>
+                        <outlet property="Player4" destination="mdG-m6-tK7" id="FZa-v0-8za"/>
+                        <outlet property="Player5" destination="Hf7-gu-6E4" id="e46-Tl-kjl"/>
+                        <outlet property="Player6" destination="GuT-mt-OhA" id="s67-1f-2Bz"/>
                         <outlet property="Sixes" destination="Zdg-Ba-VWw" id="ttK-YX-qzw"/>
                         <outlet property="SmallStright" destination="9Ka-Yu-cXh" id="PDN-N6-hvn"/>
                         <outlet property="ThreeOfAKind" destination="SaN-ui-dPk" id="Ni6-vj-VuM"/>
