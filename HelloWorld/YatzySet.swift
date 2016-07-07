@@ -12,7 +12,7 @@ class YatzySet{
     let MAX_PLAYS = 19;
     let BONUS = 50;
     let BONUS_LIMIT = 0;
-        
+    
     var Rounds: [YatzyRound]
     var Left: YatzySet?
     var Right: YatzySet?
@@ -26,14 +26,21 @@ class YatzySet{
     }
     
     func Verify() -> Bool {
-        if (Left != nil){
-            if (Left!.RoundsPlayed() != RoundsPlayed()) {
+        let p = RoundsPlayed()
+        if (Left != nil && p != 0){
+            let l = Left!.RoundsPlayed()
+            if (l != p && l != p + 1) {
                 return false
             }
         }
-        if (Right != nil && Right?.PlayedRounds().count != 0){
-            if (Right!.RoundsPlayed() != RoundsPlayed() - 1){
-                return false
+        
+        
+        if (Right != nil){
+            let r = Right!.RoundsPlayed()
+            if (r != 0){
+                if (r != p - 1 && r != p){
+                    return false
+                }
             }
         }
         return true
@@ -46,16 +53,16 @@ class YatzySet{
     func GetScore() -> Int {
         return PlayedRounds().reduce(0) {$0 + ($1.Score())} + GetBonus()
     }
-
+    
     func GetBonus() -> Int {
         return GetTopScore() >= BONUS_LIMIT ? BONUS : 0
     }
-
+    
     
     func GetTopScore() -> Int {
         return PlayedTopRounds().reduce(0) {$0 + ($1.Score())}
     }
-
+    
     
     func IsTopSet() -> Bool {
         return PlayedTopRounds().count == 6
@@ -64,11 +71,11 @@ class YatzySet{
     func PlayedRounds() -> [YatzyRound] {
         return Rounds.filter({!$0.Blank()})
     }
-
+    
     func PlayedTopRounds() -> [YatzyRound] {
         return Rounds[0...5].filter({!$0.Blank()})
     }
-
+    
     class func  MaxInput(play : Int) -> Int {
         return 4
     }

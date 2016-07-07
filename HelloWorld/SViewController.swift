@@ -169,7 +169,12 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     
     func DimSetPlays() {
         for i in 0..<18 {
-            plays![i].alpha = selectedPlayer.Rounds[i].Blank() ? 1 : 0
+            let played = selectedPlayer.Rounds[i].Blank()
+            if let label = plays![i] as? UILabel {
+                label.textColor = played ? UIColor.darkTextColor() : UIColor.init(colorLiteralRed: 0.95, green: 0.95, blue: 0.95, alpha: 1)
+            } else  {
+                plays![i].alpha = played ? 1.0 : 0.1
+            }
         }
     }
     
@@ -179,7 +184,7 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         
         updateScore()
     }
-    
+
     @IBAction func scratch(dice: UIButton) {
         currentPlay.Scratch()
         updateScore()
@@ -196,27 +201,29 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         selectedPlayButton?.setTitle(score, forState: .Normal)
         selectedBonus?.text = String(selectedPlayer.GetBonus())
         selectedTotal?.text = String(selectedPlayer.GetScore())
-        if (!selectedPlayer.Verify()){
-            selectedNameLabel?.backgroundColor = UIColor.redColor()
-        } else {
-            selectedNameLabel?.backgroundColor = UIColor.whiteColor()
+        updateWarnings()
+    }
+    
+    func updateWarnings(){
+        for i in 0..<6 {
+            let set = YatzySets[i]
+            GetNameLabel(i).backgroundColor = set.Verify() ? UIColor.whiteColor() : UIColor.redColor()
         }
-        
     }
     
     func GetBonus(player : Int) -> UITextField {
         switch player {
-        case 1:
+        case 0:
             return Bonus1!
-        case 2:
+        case 1:
             return Bonus2!
-        case 3:
+        case 2:
             return Bonus3!
-        case 4:
+        case 3:
             return Bonus4!
-        case 5:
+        case 4:
             return Bonus5!
-        case 6:
+        case 5:
             return Bonus6!
         default:
             return Bonus1!
@@ -225,17 +232,17 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     
     func GetTotal(player : Int) -> UILabel {
         switch player {
-        case 1:
+        case 0:
             return Total1!
-        case 2:
+        case 1:
             return Total2!
-        case 3:
+        case 2:
             return Total3!
-        case 4:
+        case 3:
             return Total4!
-        case 5:
+        case 4:
             return Total5!
-        case 6:
+        case 5:
             return Total6!
         default:
             return Total1!
@@ -244,17 +251,17 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     
     func GetNameLabel(player : Int) -> UITextField {
         switch player {
-        case 1:
+        case 0:
             return Player1!
-        case 2:
+        case 1:
             return Player2!
-        case 3:
+        case 2:
             return Player3!
-        case 4:
+        case 3:
             return Player4!
-        case 5:
+        case 4:
             return Player5!
-        case 6:
+        case 5:
             return Player6!
         default:
             return Player1!
