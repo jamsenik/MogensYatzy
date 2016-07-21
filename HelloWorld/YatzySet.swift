@@ -9,20 +9,30 @@
 import Foundation
 
 class YatzySet{
-    let MAX_PLAYS = 19;
     let BONUS = 50;
-    let BONUS_LIMIT = 0;
     
-    var Rounds: [YatzyRound]
+    var Rounds: [Round]
     var Left: YatzySet?
     var Right: YatzySet?
     var PlayerName : String = ""
     
     init(){
         Rounds = Array()
-        for r in 0...MAX_PLAYS {
-            Rounds.append(YatzyRound(round: r))
+        for r in 1...6 {
+            Rounds.append(UpperRound(kind: r))
         }
+        Rounds.append(PatternRound(pattern: [2]))
+        Rounds.append(PatternRound(pattern: [2, 2]))
+        Rounds.append(PatternRound(pattern: [2, 2, 2]))
+        Rounds.append(PatternRound(pattern: [3]))
+        Rounds.append(PatternRound(pattern: [4]))
+        Rounds.append(PatternRound(pattern: [3, 3]))
+        Rounds.append(FixedRound(pattern: [1, 2, 3, 4, 5]))
+        Rounds.append(FixedRound(pattern: [2, 3, 4, 5, 6]))
+        Rounds.append(FixedRound(pattern: [1, 2, 3, 4, 5, 6], bonus: 9))
+        Rounds.append(PatternRound(pattern: [3, 2]))
+        Rounds.append(Round())
+        Rounds.append(PatternRound(pattern: [6], bonus: 100))
     }
     
     func Verify() -> Bool {
@@ -55,12 +65,11 @@ class YatzySet{
     }
     
     func GetBonus() -> Int {
-        return GetTopScore() >= BONUS_LIMIT ? BONUS : 0
-    }
-    
-    
-    func GetTopScore() -> Int {
-        return PlayedTopRounds().reduce(0) {$0 + ($1.Score())}
+        var bonus : Int = 0;
+        for r in Rounds{
+            bonus += r.GetBonus()
+        }
+        return bonus >= 0 && IsTopSet() ? BONUS : 0
     }
     
     
@@ -68,11 +77,11 @@ class YatzySet{
         return PlayedTopRounds().count == 6
     }
     
-    func PlayedRounds() -> [YatzyRound] {
+    func PlayedRounds() -> [Round] {
         return Rounds.filter({!$0.Blank()})
     }
     
-    func PlayedTopRounds() -> [YatzyRound] {
+    func PlayedTopRounds() -> [Round] {
         return Rounds[0...5].filter({!$0.Blank()})
     }
     

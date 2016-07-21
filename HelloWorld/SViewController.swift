@@ -44,7 +44,7 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var Castle: UILabel?
     @IBOutlet weak var SmallStright: UILabel?
     @IBOutlet weak var LargeStright: UILabel?
-    @IBOutlet weak var Mogens: UIImageView?
+    @IBOutlet weak var Mogens: UILabel?
     @IBOutlet weak var FullHouse: UILabel?
     @IBOutlet weak var Chance: UILabel?
     @IBOutlet weak var Yatzy: UILabel?
@@ -59,18 +59,19 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     var selectedBonus : UITextField?
     var selectedTotal : UILabel?
     var selectedNameLabel : UITextField?
-    var currentPlay = YatzyRound(round: 0)
+    var currentPlay = Round()
     var plays : [UIView]?
     
     required init?(coder aDecoder: NSCoder) {
         YatzySets = Array<YatzySet>();
         selectedPlayer = YatzySet()
         super.init(coder: aDecoder)
-        Reset()
+        ResetModel()
         
     }
     
-    func Reset() -> Void {
+    func ResetModel(){
+        YatzySets = Array()
         var prev : YatzySet? = nil;
         for _ in 0...5 {
             let current = YatzySet()
@@ -82,8 +83,25 @@ class SViewController: UIViewController, UIAlertViewDelegate {
             prev = current
         }
         selectedPlayer = YatzySets[0]
-        
     }
+    
+    func ResetView(){
+        currentRound!.layer.borderWidth = 1.0
+        currentRound!.layer.cornerRadius = 8
+        for b in allPlayButtons! {
+            b.setTitle("", forState: .Normal)
+        }
+        
+        for p in 0...5 {
+            GetTotal(p).text = String(0)
+        }
+        currentPlay = Round()
+        dimDices()
+        updateScore()
+        DimSetPlays()
+
+    }
+    
     override func viewWillAppear(animated: Bool) {
         for button in allPlayButtons! {
             button.setTitle("", forState: .Normal)
@@ -111,6 +129,7 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         p.append(Chance!)
         p.append(Yatzy!)
         plays = p
+        ResetView()
     }
     
     
@@ -136,17 +155,23 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         if alertView.tag == 1 {
             if buttonIndex == 1 {
-                Reset()
+                ResetModel()
+                ResetView()
             }
         }
     }
     
     @IBAction func playChosen(sender: UIButton) {
+        if (currentPlay.IsIncomplete()){
+            return
+        }
         if selectedPlayButton != nil {
             selectedPlayButton!.layer.borderColor = UIColor.lightGrayColor().CGColor
             selectedPlayButton!.layer.borderWidth = 1
             selectedPlayButton?.selected = false
         }
+        
+        view.endEditing(true)
         
         let player = (sender.tag / 100) - 1
         let play = sender.tag % 100
@@ -154,16 +179,17 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         selectedPlayer = YatzySets[player]
         selectedPlay = play
         currentPlay = selectedPlayer.Rounds[play]
-        currentRound?.text? = currentPlay.ToString()
+        currentRound?.text? = "  " + currentPlay.ToString()
         selectedBonus = GetBonus(player)
         selectedTotal = GetTotal(player)
         selectedNameLabel = GetNameLabel(player)
         
         selectedPlayButton = sender;
-        selectedPlayButton!.layer.borderColor = UIColor.redColor().CGColor
+        selectedPlayButton!.layer.borderColor = UIColor.blueColor().CGColor
         selectedPlayButton!.layer.borderWidth = 3
         selectedPlayButton?.selected = true
         DimSetPlays()
+        dimDices()
         
     }
     
@@ -184,7 +210,7 @@ class SViewController: UIViewController, UIAlertViewDelegate {
         
         updateScore()
     }
-
+    
     @IBAction func scratch(dice: UIButton) {
         currentPlay.Scratch()
         updateScore()
@@ -196,18 +222,25 @@ class SViewController: UIViewController, UIAlertViewDelegate {
     }
     
     func updateScore(){
-        currentRound?.text? = currentPlay.ToString()
+        currentRound?.text? = "  " + currentPlay.ToString()
         let score : String = currentPlay.Blank() ? "" : currentPlay.Scratched ? "X" : String(currentPlay.Score())
         selectedPlayButton?.setTitle(score, forState: .Normal)
         selectedBonus?.text = String(selectedPlayer.GetBonus())
         selectedTotal?.text = String(selectedPlayer.GetScore())
         updateWarnings()
+        dimDices()
     }
     
     func updateWarnings(){
         for i in 0..<6 {
             let set = YatzySets[i]
             GetNameLabel(i).backgroundColor = set.Verify() ? UIColor.whiteColor() : UIColor.redColor()
+        }
+    }
+    
+    func dimDices(){
+        for b in allDiceButtons! {
+            b.enabled = currentPlay.CanBeNext(Int(b.currentTitle!)!)
         }
     }
     
@@ -267,5 +300,5 @@ class SViewController: UIViewController, UIAlertViewDelegate {
             return Player1!
         }
     }
-
+    
 }

@@ -8,13 +8,11 @@
 
 import Foundation
 
-class YatzyRound{
+class Round{
     var Cubes: [Int] = Array()
     var Scratched = false
-    var round : Int
-    
-    init(round : Int){
-        self.round = round
+   
+    init(){
     }
     
     func Score() -> Int {
@@ -51,6 +49,9 @@ class YatzyRound{
         if (Cubes.count > 0){
             Cubes.removeLast()            
         }
+        if (Scratched){
+            Clear()
+        }
     }
     
     func ToString() -> String {
@@ -58,5 +59,17 @@ class YatzyRound{
             return "X"
         }
         return Cubes.map({String($0)}).reduce("", combine: {$0 + String($1)})
+    }
+    
+    func GetBonus() -> Int {
+        return 0
+    }
+    
+    func CanBeNext(v : Int) -> Bool{
+        return Cubes.count < 6
+    }
+    
+    func IsIncomplete() -> Bool{
+        return (Cubes.count > 0) && (Cubes.count < 6)
     }
 }

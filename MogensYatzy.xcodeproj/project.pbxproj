@@ -3,14 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A2009E017AE966B00A2A7DA /* dice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2009DF17AE966B00A2A7DA /* dice.ttf */; };
+		3A2D10511D3EA05D002E795D /* Mogens Dice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2D10501D3EA05D002E795D /* Mogens Dice.ttf */; };
+		3A2D10531D40BB67002E795D /* PatternRoundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D10521D40BB67002E795D /* PatternRoundTest.swift */; };
 		3A4977431D28329F007C6487 /* YatzySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977421D28329F007C6487 /* YatzySet.swift */; };
-		3A4977451D28482A007C6487 /* YatzyRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977441D28482A007C6487 /* YatzyRound.swift */; };
+		3A4977451D28482A007C6487 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977441D28482A007C6487 /* Round.swift */; };
 		3A4977471D285414007C6487 /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977461D285414007C6487 /* SViewController.swift */; };
+		3A7801B51D3684070043413A /* PatternRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7801B41D3684070043413A /* PatternRound.swift */; };
+		3A7801B71D36B1BD0043413A /* FixedRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7801B61D36B1BD0043413A /* FixedRound.swift */; };
+		3ABAD53D1D3E36C1009F4215 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABAD53C1D3E36C1009F4215 /* Images.xcassets */; };
 		3ACF8F8E15B9D35E00252361 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACF8F8D15B9D35E00252361 /* UIKit.framework */; };
 		3ACF8F9015B9D35E00252361 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACF8F8F15B9D35E00252361 /* Foundation.framework */; };
 		3ACF8F9215B9D35E00252361 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACF8F9115B9D35E00252361 /* CoreGraphics.framework */; };
@@ -18,13 +22,11 @@
 		3ACF8F9A15B9D35E00252361 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF8F9915B9D35E00252361 /* main.m */; };
 		3ACF8F9E15B9D35F00252361 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF8F9D15B9D35F00252361 /* AppDelegate.m */; };
 		3ACF8FA115B9D35F00252361 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF8F9F15B9D35F00252361 /* MainStoryboard.storyboard */; };
-		3ACF8FC815BC884500252361 /* Camre-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF8FC715BC884500252361 /* Camre-small.png */; };
-		3ACF8FCA15BDC42D00252361 /* terning.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF8FC915BDC42D00252361 /* terning.png */; };
 		3ADF424E189C1FE600CBED0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADF424D189C1FE600CBED0C /* XCTest.framework */; };
 		3ADF424F189C1FE600CBED0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACF8F8F15B9D35E00252361 /* Foundation.framework */; };
 		3ADF4250189C1FE600CBED0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACF8F8D15B9D35E00252361 /* UIKit.framework */; };
 		3ADF4256189C1FE600CBED0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ADF4254189C1FE600CBED0C /* InfoPlist.strings */; };
-		3ADF4258189C1FE600CBED0C /* MogensYatzy_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF4257189C1FE600CBED0C /* MogensYatzy_Tests.m */; };
+		3AF310C21D353449006108EA /* UpperRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF310C11D353448006108EA /* UpperRound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A2009DF17AE966B00A2A7DA /* dice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dice.ttf; sourceTree = "<group>"; };
+		3A2D10501D3EA05D002E795D /* Mogens Dice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mogens Dice.ttf"; sourceTree = "<group>"; };
+		3A2D10521D40BB67002E795D /* PatternRoundTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternRoundTest.swift; sourceTree = "<group>"; };
 		3A4977421D28329F007C6487 /* YatzySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YatzySet.swift; sourceTree = "<group>"; };
-		3A4977441D28482A007C6487 /* YatzyRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YatzyRound.swift; sourceTree = "<group>"; };
+		3A4977441D28482A007C6487 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		3A4977461D285414007C6487 /* SViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SViewController.swift; sourceTree = "<group>"; };
 		3A4977481D2950DE007C6487 /* MogensYatzy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MogensYatzy-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A7801B41D3684070043413A /* PatternRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternRound.swift; sourceTree = "<group>"; };
+		3A7801B61D36B1BD0043413A /* FixedRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedRound.swift; sourceTree = "<group>"; };
+		3ABAD53C1D3E36C1009F4215 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MogensYatzy/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		3ACF8F8915B9D35E00252361 /* MogensYatzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MogensYatzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACF8F8D15B9D35E00252361 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3ACF8F8F15B9D35E00252361 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,14 +61,12 @@
 		3ACF8F9D15B9D35F00252361 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3ACF8FA015B9D35F00252361 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3ACF8FAB15B9D35F00252361 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3ACF8FC715BC884500252361 /* Camre-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Camre-small.png"; path = "../Camre-small.png"; sourceTree = "<group>"; };
-		3ACF8FC915BDC42D00252361 /* terning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terning.png; sourceTree = "<group>"; };
 		3ADF424C189C1FE600CBED0C /* MogensYatzy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MogensYatzy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADF424D189C1FE600CBED0C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3ADF4253189C1FE600CBED0C /* MogensYatzy Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MogensYatzy Tests-Info.plist"; sourceTree = "<group>"; };
 		3ADF4255189C1FE600CBED0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3ADF4257189C1FE600CBED0C /* MogensYatzy_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MogensYatzy_Tests.m; sourceTree = "<group>"; };
 		3ADF4259189C1FE600CBED0C /* MogensYatzy Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MogensYatzy Tests-Prefix.pch"; sourceTree = "<group>"; };
+		3AF310C11D353448006108EA /* UpperRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperRound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,7 @@
 		3ACF8F7E15B9D35E00252361 = {
 			isa = PBXGroup;
 			children = (
-				3ACF8F9315B9D35E00252361 /* HelloWorld */,
+				3ACF8F9315B9D35E00252361 /* MogensYatzy */,
 				3ADF4251189C1FE600CBED0C /* MogensYatzy Tests */,
 				3ACF8F8C15B9D35E00252361 /* Frameworks */,
 				3ACF8F8A15B9D35E00252361 /* Products */,
@@ -120,27 +124,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3ACF8F9315B9D35E00252361 /* HelloWorld */ = {
+		3ACF8F9315B9D35E00252361 /* MogensYatzy */ = {
 			isa = PBXGroup;
 			children = (
+				3AF310C11D353448006108EA /* UpperRound.swift */,
 				3ACF8F9C15B9D35F00252361 /* AppDelegate.h */,
 				3ACF8F9D15B9D35F00252361 /* AppDelegate.m */,
 				3ACF8F9F15B9D35F00252361 /* MainStoryboard.storyboard */,
 				3ACF8F9415B9D35E00252361 /* Supporting Files */,
 				3A4977421D28329F007C6487 /* YatzySet.swift */,
-				3A4977441D28482A007C6487 /* YatzyRound.swift */,
+				3A4977441D28482A007C6487 /* Round.swift */,
 				3A4977461D285414007C6487 /* SViewController.swift */,
 				3A4977481D2950DE007C6487 /* MogensYatzy-Bridging-Header.h */,
+				3A7801B41D3684070043413A /* PatternRound.swift */,
+				3A7801B61D36B1BD0043413A /* FixedRound.swift */,
+				3ABAD53C1D3E36C1009F4215 /* Images.xcassets */,
 			);
+			name = MogensYatzy;
 			path = HelloWorld;
 			sourceTree = "<group>";
 		};
 		3ACF8F9415B9D35E00252361 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A2009DF17AE966B00A2A7DA /* dice.ttf */,
-				3ACF8FC715BC884500252361 /* Camre-small.png */,
-				3ACF8FC915BDC42D00252361 /* terning.png */,
+				3A2D10501D3EA05D002E795D /* Mogens Dice.ttf */,
 				3ACF8F9515B9D35E00252361 /* MogensYatzy-Info.plist */,
 				3ACF8F9615B9D35E00252361 /* InfoPlist.strings */,
 				3ACF8F9915B9D35E00252361 /* main.m */,
@@ -152,7 +159,7 @@
 		3ADF4251189C1FE600CBED0C /* MogensYatzy Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3ADF4257189C1FE600CBED0C /* MogensYatzy_Tests.m */,
+				3A2D10521D40BB67002E795D /* PatternRoundTest.swift */,
 				3ADF4252189C1FE600CBED0C /* Supporting Files */,
 			);
 			path = "MogensYatzy Tests";
@@ -224,7 +231,7 @@
 				};
 			};
 			buildConfigurationList = 3ACF8F8315B9D35E00252361 /* Build configuration list for PBXProject "MogensYatzy" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -247,10 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ACF8F9815B9D35E00252361 /* InfoPlist.strings in Resources */,
+				3A2D10511D3EA05D002E795D /* Mogens Dice.ttf in Resources */,
 				3ACF8FA115B9D35F00252361 /* MainStoryboard.storyboard in Resources */,
-				3ACF8FC815BC884500252361 /* Camre-small.png in Resources */,
-				3ACF8FCA15BDC42D00252361 /* terning.png in Resources */,
-				3A2009E017AE966B00A2A7DA /* dice.ttf in Resources */,
+				3ABAD53D1D3E36C1009F4215 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7801B51D3684070043413A /* PatternRound.swift in Sources */,
 				3ACF8F9A15B9D35E00252361 /* main.m in Sources */,
 				3A4977431D28329F007C6487 /* YatzySet.swift in Sources */,
-				3A4977451D28482A007C6487 /* YatzyRound.swift in Sources */,
+				3A7801B71D36B1BD0043413A /* FixedRound.swift in Sources */,
+				3A4977451D28482A007C6487 /* Round.swift in Sources */,
+				3AF310C21D353449006108EA /* UpperRound.swift in Sources */,
 				3ACF8F9E15B9D35F00252361 /* AppDelegate.m in Sources */,
 				3A4977471D285414007C6487 /* SViewController.swift in Sources */,
 			);
@@ -281,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ADF4258189C1FE600CBED0C /* MogensYatzy_Tests.m in Sources */,
+				3A2D10531D40BB67002E795D /* PatternRoundTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +406,8 @@
 		3ACF8FBD15B9D35F00252361 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -416,6 +427,8 @@
 		3ACF8FBE15B9D35F00252361 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -453,8 +466,10 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = "MogensYatzy Tests/MogensYatzy Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hans-Kyndesgaard.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -479,6 +494,7 @@
 				GCC_PREFIX_HEADER = "MogensYatzy Tests/MogensYatzy Tests-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = "MogensYatzy Tests/MogensYatzy Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hans-Kyndesgaard.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
