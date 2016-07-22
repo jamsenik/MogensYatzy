@@ -3,7 +3,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "Terning splash copy.png",
+      "filename" : "Mogens Splash-1024.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "1x"
@@ -11,7 +11,7 @@
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Terning splash l copy.png",
+      "filename" : "Mogens Splash Landscape-1024.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "1x"
@@ -19,7 +19,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "Terning splash copy-1.png",
+      "filename" : "Mogens Splash.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
@@ -27,7 +27,7 @@
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Terning splash l copy-1.png",
+      "filename" : "Mogens Splash Landscape.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
@@ -35,56 +35,56 @@
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "Terning splash copy-2.png",
+      "filename" : "Mogens Splash-1024-status.png",
       "extent" : "to-status-bar",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "Terning splash copy-4.png",
+      "filename" : "Mogens Splash-1025.png",
       "extent" : "full-screen",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Terning splash l copy-2.png",
+      "filename" : "Mogens Splash Landscape-1024-status.png",
       "extent" : "to-status-bar",
       "scale" : "1x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Terning splash l copy-4.png",
+      "filename" : "Mogens Splash Landscape-1025.png",
       "extent" : "full-screen",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "Terning splash copy-3.png",
+      "filename" : "Mogens Splash-status.png",
       "extent" : "to-status-bar",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "Terning splash copy-5.png",
+      "filename" : "Mogens Splash-1.png",
       "extent" : "full-screen",
       "scale" : "2x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Terning splash l copy-3.png",
+      "filename" : "Mogens Splash Landscape-status.png",
       "extent" : "to-status-bar",
       "scale" : "2x"
     },
     {
       "orientation" : "landscape",
       "idiom" : "ipad",
-      "filename" : "Terning splash l copy-5.png",
+      "filename" : "Mogens Splash Landscape-1.png",
       "extent" : "full-screen",
       "scale" : "2x"
     }

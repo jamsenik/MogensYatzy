@@ -16,7 +16,6 @@
 		3A4977471D285414007C6487 /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977461D285414007C6487 /* SViewController.swift */; };
 		3A7801B51D3684070043413A /* PatternRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7801B41D3684070043413A /* PatternRound.swift */; };
 		3A7801B71D36B1BD0043413A /* FixedRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7801B61D36B1BD0043413A /* FixedRound.swift */; };
-		3A7F105E1D42150200EFDE91 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F105D1D42150100EFDE91 /* README.md */; };
 		3ABAD53D1D3E36C1009F4215 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABAD53C1D3E36C1009F4215 /* Images.xcassets */; };
 		3ACF8F8E15B9D35E00252361 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACF8F8D15B9D35E00252361 /* UIKit.framework */; };
 		3ACF8F9015B9D35E00252361 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACF8F8F15B9D35E00252361 /* Foundation.framework */; };
@@ -53,7 +52,6 @@
 		3A4977481D2950DE007C6487 /* MogensYatzy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MogensYatzy-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A7801B41D3684070043413A /* PatternRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternRound.swift; sourceTree = "<group>"; };
 		3A7801B61D36B1BD0043413A /* FixedRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedRound.swift; sourceTree = "<group>"; };
-		3A7F105D1D42150100EFDE91 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3ABAD53C1D3E36C1009F4215 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MogensYatzy/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		3ACF8F8915B9D35E00252361 /* Mogens Yatzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mogens Yatzy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACF8F8D15B9D35E00252361 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -102,7 +100,6 @@
 		3ACF8F7E15B9D35E00252361 = {
 			isa = PBXGroup;
 			children = (
-				3A7F105D1D42150100EFDE91 /* README.md */,
 				3ACF8F9315B9D35E00252361 /* MogensYatzy */,
 				3ADF4251189C1FE600CBED0C /* MogensYatzy Tests */,
 				3ACF8F8C15B9D35E00252361 /* Frameworks */,
@@ -289,7 +286,6 @@
 				3A7801B71D36B1BD0043413A /* FixedRound.swift in Sources */,
 				3A4977451D28482A007C6487 /* Round.swift in Sources */,
 				3AF310C21D353449006108EA /* UpperRound.swift in Sources */,
-				3A7F105E1D42150200EFDE91 /* README.md in Sources */,
 				3ACF8F9E15B9D35F00252361 /* AppDelegate.m in Sources */,
 				3A4977471D285414007C6487 /* SViewController.swift in Sources */,
 			);
