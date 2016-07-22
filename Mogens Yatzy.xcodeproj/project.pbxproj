@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A2D10511D3EA05D002E795D /* Mogens Dice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A2D10501D3EA05D002E795D /* Mogens Dice.ttf */; };
 		3A2D10531D40BB67002E795D /* PatternRoundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D10521D40BB67002E795D /* PatternRoundTest.swift */; };
+		3A2D10551D40C20C002E795D /* FixedRoundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D10541D40C20C002E795D /* FixedRoundTest.swift */; };
+		3A2D10571D40DC39002E795D /* UpperRoundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D10561D40DC39002E795D /* UpperRoundTest.swift */; };
 		3A4977431D28329F007C6487 /* YatzySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977421D28329F007C6487 /* YatzySet.swift */; };
 		3A4977451D28482A007C6487 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977441D28482A007C6487 /* Round.swift */; };
 		3A4977471D285414007C6487 /* SViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4977461D285414007C6487 /* SViewController.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		3A2D10501D3EA05D002E795D /* Mogens Dice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mogens Dice.ttf"; sourceTree = "<group>"; };
 		3A2D10521D40BB67002E795D /* PatternRoundTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternRoundTest.swift; sourceTree = "<group>"; };
+		3A2D10541D40C20C002E795D /* FixedRoundTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedRoundTest.swift; sourceTree = "<group>"; };
+		3A2D10561D40DC39002E795D /* UpperRoundTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperRoundTest.swift; sourceTree = "<group>"; };
 		3A4977421D28329F007C6487 /* YatzySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YatzySet.swift; sourceTree = "<group>"; };
 		3A4977441D28482A007C6487 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		3A4977461D285414007C6487 /* SViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SViewController.swift; sourceTree = "<group>"; };
@@ -49,21 +53,21 @@
 		3A7801B41D3684070043413A /* PatternRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternRound.swift; sourceTree = "<group>"; };
 		3A7801B61D36B1BD0043413A /* FixedRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedRound.swift; sourceTree = "<group>"; };
 		3ABAD53C1D3E36C1009F4215 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MogensYatzy/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		3ACF8F8915B9D35E00252361 /* MogensYatzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MogensYatzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACF8F8915B9D35E00252361 /* Mogens Yatzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mogens Yatzy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACF8F8D15B9D35E00252361 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3ACF8F8F15B9D35E00252361 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3ACF8F9115B9D35E00252361 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3ACF8F9515B9D35E00252361 /* MogensYatzy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MogensYatzy-Info.plist"; sourceTree = "<group>"; };
+		3ACF8F9515B9D35E00252361 /* Mogens Yatzy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mogens Yatzy-Info.plist"; sourceTree = "<group>"; };
 		3ACF8F9715B9D35E00252361 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3ACF8F9915B9D35E00252361 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3ACF8F9B15B9D35E00252361 /* MogensYatzy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MogensYatzy-Prefix.pch"; sourceTree = "<group>"; };
+		3ACF8F9B15B9D35E00252361 /* Mogens Yatzy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mogens Yatzy-Prefix.pch"; sourceTree = "<group>"; };
 		3ACF8F9C15B9D35F00252361 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3ACF8F9D15B9D35F00252361 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3ACF8FA015B9D35F00252361 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3ACF8FAB15B9D35F00252361 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3ADF424C189C1FE600CBED0C /* MogensYatzy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MogensYatzy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ADF424C189C1FE600CBED0C /* Mogens Yatzy.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mogens Yatzy.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADF424D189C1FE600CBED0C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3ADF4253189C1FE600CBED0C /* MogensYatzy Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MogensYatzy Tests-Info.plist"; sourceTree = "<group>"; };
+		3ADF4253189C1FE600CBED0C /* Mogens Yatzy Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mogens Yatzy Tests-Info.plist"; sourceTree = "<group>"; };
 		3ADF4255189C1FE600CBED0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3ADF4259189C1FE600CBED0C /* MogensYatzy Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MogensYatzy Tests-Prefix.pch"; sourceTree = "<group>"; };
 		3AF310C11D353448006108EA /* UpperRound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperRound.swift; sourceTree = "<group>"; };
@@ -106,8 +110,8 @@
 		3ACF8F8A15B9D35E00252361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3ACF8F8915B9D35E00252361 /* MogensYatzy.app */,
-				3ADF424C189C1FE600CBED0C /* MogensYatzy Tests.xctest */,
+				3ACF8F8915B9D35E00252361 /* Mogens Yatzy.app */,
+				3ADF424C189C1FE600CBED0C /* Mogens Yatzy.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,18 +144,17 @@
 				3A7801B61D36B1BD0043413A /* FixedRound.swift */,
 				3ABAD53C1D3E36C1009F4215 /* Images.xcassets */,
 			);
-			name = MogensYatzy;
-			path = HelloWorld;
+			path = MogensYatzy;
 			sourceTree = "<group>";
 		};
 		3ACF8F9415B9D35E00252361 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				3A2D10501D3EA05D002E795D /* Mogens Dice.ttf */,
-				3ACF8F9515B9D35E00252361 /* MogensYatzy-Info.plist */,
+				3ACF8F9515B9D35E00252361 /* Mogens Yatzy-Info.plist */,
 				3ACF8F9615B9D35E00252361 /* InfoPlist.strings */,
 				3ACF8F9915B9D35E00252361 /* main.m */,
-				3ACF8F9B15B9D35E00252361 /* MogensYatzy-Prefix.pch */,
+				3ACF8F9B15B9D35E00252361 /* Mogens Yatzy-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,6 +164,8 @@
 			children = (
 				3A2D10521D40BB67002E795D /* PatternRoundTest.swift */,
 				3ADF4252189C1FE600CBED0C /* Supporting Files */,
+				3A2D10541D40C20C002E795D /* FixedRoundTest.swift */,
+				3A2D10561D40DC39002E795D /* UpperRoundTest.swift */,
 			);
 			path = "MogensYatzy Tests";
 			sourceTree = "<group>";
@@ -168,7 +173,7 @@
 		3ADF4252189C1FE600CBED0C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3ADF4253189C1FE600CBED0C /* MogensYatzy Tests-Info.plist */,
+				3ADF4253189C1FE600CBED0C /* Mogens Yatzy Tests-Info.plist */,
 				3ADF4254189C1FE600CBED0C /* InfoPlist.strings */,
 				3ADF4259189C1FE600CBED0C /* MogensYatzy Tests-Prefix.pch */,
 			);
@@ -178,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3ACF8F8815B9D35E00252361 /* MogensYatzy */ = {
+		3ACF8F8815B9D35E00252361 /* Mogens Yatzy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3ACF8FBC15B9D35F00252361 /* Build configuration list for PBXNativeTarget "MogensYatzy" */;
+			buildConfigurationList = 3ACF8FBC15B9D35F00252361 /* Build configuration list for PBXNativeTarget "Mogens Yatzy" */;
 			buildPhases = (
 				3ACF8F8515B9D35E00252361 /* Sources */,
 				3ACF8F8615B9D35E00252361 /* Frameworks */,
@@ -190,14 +195,14 @@
 			);
 			dependencies = (
 			);
-			name = MogensYatzy;
-			productName = HelloWorld;
-			productReference = 3ACF8F8915B9D35E00252361 /* MogensYatzy.app */;
+			name = "Mogens Yatzy";
+			productName = "Mogens Yatzy";
+			productReference = 3ACF8F8915B9D35E00252361 /* Mogens Yatzy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3ADF424B189C1FE600CBED0C /* MogensYatzy Tests */ = {
+		3ADF424B189C1FE600CBED0C /* Mogens Yatzy Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3ADF425C189C1FE600CBED0C /* Build configuration list for PBXNativeTarget "MogensYatzy Tests" */;
+			buildConfigurationList = 3ADF425C189C1FE600CBED0C /* Build configuration list for PBXNativeTarget "Mogens Yatzy Tests" */;
 			buildPhases = (
 				3ADF4248189C1FE600CBED0C /* Sources */,
 				3ADF4249189C1FE600CBED0C /* Frameworks */,
@@ -208,9 +213,9 @@
 			dependencies = (
 				3ADF425B189C1FE600CBED0C /* PBXTargetDependency */,
 			);
-			name = "MogensYatzy Tests";
+			name = "Mogens Yatzy Tests";
 			productName = "MogensYatzy Tests";
-			productReference = 3ADF424C189C1FE600CBED0C /* MogensYatzy Tests.xctest */;
+			productReference = 3ADF424C189C1FE600CBED0C /* Mogens Yatzy.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3ACF8F8315B9D35E00252361 /* Build configuration list for PBXProject "MogensYatzy" */;
+			buildConfigurationList = 3ACF8F8315B9D35E00252361 /* Build configuration list for PBXProject "Mogens Yatzy" */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -242,8 +247,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3ACF8F8815B9D35E00252361 /* MogensYatzy */,
-				3ADF424B189C1FE600CBED0C /* MogensYatzy Tests */,
+				3ACF8F8815B9D35E00252361 /* Mogens Yatzy */,
+				3ADF424B189C1FE600CBED0C /* Mogens Yatzy Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2D10571D40DC39002E795D /* UpperRoundTest.swift in Sources */,
 				3A2D10531D40BB67002E795D /* PatternRoundTest.swift in Sources */,
+				3A2D10551D40C20C002E795D /* FixedRoundTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +306,7 @@
 /* Begin PBXTargetDependency section */
 		3ADF425B189C1FE600CBED0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3ACF8F8815B9D35E00252361 /* MogensYatzy */;
+			target = 3ACF8F8815B9D35E00252361 /* Mogens Yatzy */;
 			targetProxy = 3ADF425A189C1FE600CBED0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -412,13 +419,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorld/MogensYatzy-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorld/MogensYatzy-Info.plist";
+				GCC_PREFIX_HEADER = "MogensYatzy/Mogens Yatzy-Prefix.pch";
+				INFOPLIST_FILE = "MogensYatzy/Mogens Yatzy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hans-Kyndesgaard.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = MogensYatzy;
+				PRODUCT_NAME = "Mogens Yatzy";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/MogensYatzy-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MogensYatzy/MogensYatzy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
@@ -433,13 +440,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorld/MogensYatzy-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorld/MogensYatzy-Info.plist";
+				GCC_PREFIX_HEADER = "MogensYatzy/Mogens Yatzy-Prefix.pch";
+				INFOPLIST_FILE = "MogensYatzy/Mogens Yatzy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hans-Kyndesgaard.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = MogensYatzy;
+				PRODUCT_NAME = "Mogens Yatzy";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/MogensYatzy-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MogensYatzy/MogensYatzy-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -459,16 +466,16 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MogensYatzy Tests/MogensYatzy Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "MogensYatzy/Mogens Yatzy-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				INFOPLIST_FILE = "MogensYatzy Tests/MogensYatzy Tests-Info.plist";
+				INFOPLIST_FILE = "MogensYatzy Tests/Mogens Yatzy Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hans-Kyndesgaard.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mogens Yatzy";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -491,12 +498,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MogensYatzy Tests/MogensYatzy Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "MogensYatzy/Mogens Yatzy-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				INFOPLIST_FILE = "MogensYatzy Tests/MogensYatzy Tests-Info.plist";
+				INFOPLIST_FILE = "MogensYatzy Tests/Mogens Yatzy Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Hans-Kyndesgaard.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mogens Yatzy";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -505,7 +512,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3ACF8F8315B9D35E00252361 /* Build configuration list for PBXProject "MogensYatzy" */ = {
+		3ACF8F8315B9D35E00252361 /* Build configuration list for PBXProject "Mogens Yatzy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3ACF8FBA15B9D35F00252361 /* Debug */,
@@ -514,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3ACF8FBC15B9D35F00252361 /* Build configuration list for PBXNativeTarget "MogensYatzy" */ = {
+		3ACF8FBC15B9D35F00252361 /* Build configuration list for PBXNativeTarget "Mogens Yatzy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3ACF8FBD15B9D35F00252361 /* Debug */,
@@ -523,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3ADF425C189C1FE600CBED0C /* Build configuration list for PBXNativeTarget "MogensYatzy Tests" */ = {
+		3ADF425C189C1FE600CBED0C /* Build configuration list for PBXNativeTarget "Mogens Yatzy Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3ADF425D189C1FE600CBED0C /* Debug */,

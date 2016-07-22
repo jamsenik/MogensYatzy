@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3ACF8F8815B9D35E00252361"
-               BuildableName = "MogensYatzy.app"
-               BlueprintName = "MogensYatzy"
-               ReferencedContainer = "container:MogensYatzy.xcodeproj">
+               BuildableName = "Mogens Yatzy.app"
+               BlueprintName = "Mogens Yatzy"
+               ReferencedContainer = "container:Mogens Yatzy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "3ACF8FA915B9D35F00252361"
                BuildableName = "MogensYatzyTests.octest"
                BlueprintName = "MogensYatzyTests"
-               ReferencedContainer = "container:MogensYatzy.xcodeproj">
+               ReferencedContainer = "container:Mogens Yatzy.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3ADF424B189C1FE600CBED0C"
-               BuildableName = "MogensYatzy Tests.xctest"
-               BlueprintName = "MogensYatzy Tests"
-               ReferencedContainer = "container:MogensYatzy.xcodeproj">
+               BuildableName = "Mogens Yatzy.xctest"
+               BlueprintName = "Mogens Yatzy Tests"
+               ReferencedContainer = "container:Mogens Yatzy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3ACF8F8815B9D35E00252361"
-            BuildableName = "MogensYatzy.app"
-            BlueprintName = "MogensYatzy"
-            ReferencedContainer = "container:MogensYatzy.xcodeproj">
+            BuildableName = "Mogens Yatzy.app"
+            BlueprintName = "Mogens Yatzy"
+            ReferencedContainer = "container:Mogens Yatzy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3ACF8F8815B9D35E00252361"
-            BuildableName = "MogensYatzy.app"
-            BlueprintName = "MogensYatzy"
-            ReferencedContainer = "container:MogensYatzy.xcodeproj">
+            BuildableName = "Mogens Yatzy.app"
+            BlueprintName = "Mogens Yatzy"
+            ReferencedContainer = "container:Mogens Yatzy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3ACF8F8815B9D35E00252361"
-            BuildableName = "MogensYatzy.app"
-            BlueprintName = "MogensYatzy"
-            ReferencedContainer = "container:MogensYatzy.xcodeproj">
+            BuildableName = "Mogens Yatzy.app"
+            BlueprintName = "Mogens Yatzy"
+            ReferencedContainer = "container:Mogens Yatzy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

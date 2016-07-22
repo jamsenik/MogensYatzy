@@ -25,6 +25,14 @@ class PatternRoundTest: XCTestCase {
         XCTAssert(sut.IsIncomplete())
 
     }
+
+    func testCanBeNext() {
+        let sut = PatternRound(pattern: [3, 3])
+        sut.Add(1)
+        XCTAssert(!sut.CanBeNext(1))
+        XCTAssert(sut.CanBeNext(2))
+        
+    }
     
     func testComplete() {
         let sut = PatternRound(pattern: [3, 3])
@@ -46,7 +54,6 @@ class PatternRoundTest: XCTestCase {
         sut.Add(2)
         sut.Scratch()
         XCTAssertEqual("X", sut.ToString())
-        XCTAssertEqual(9, sut.Score())
     }
 
     func testAddingAndDeleting() {
